@@ -25,34 +25,7 @@ pipeline {
             }
         }
 
-        /*stage('Test') {
-            steps {
-                bat 'npm test'
-            }
-        }
-
-        stage('Code Analysis') {
-            steps {
-                bat 'mvn checkstyle:check'
-            }
-        }*/
-
-        /*stage('Archive Artifacts') {
-            steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-            }
-        }*/
-
-        /*stage('Deploy') {
-            when {
-                branch 'main'
-            }
-            steps {
-                echo 'Deploying application...'
-                // Add deployment script here
-            }
-        }*/
-    }
+       
 
     post {
         success {
