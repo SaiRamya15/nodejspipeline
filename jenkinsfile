@@ -7,10 +7,10 @@ pipeline {
 
     stages {
         stage('Checkout Code') {
-            steps {
-                git branch: "${env.BRANCH_NAME}", 
-                credentialsId: 'd24121e7-c5e6-413f-a8c4-890f7eeee1fc', 
-                url: 'https://github.com/SaiRamya15/nodejspipeline.git'
+            steps {  
+                GIT_CREDENTIALS_ID: 'd24121e7-c5e6-413f-a8c4-890f7eeee1fc',
+                GIT_REPO: 'https://github.com/SaiRamya15/nodejspipeline.git'
+                GIT_BRANCH: 'main'
             }
         }
 
@@ -22,13 +22,13 @@ pipeline {
 
         /*stage('Test') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
         stage('Code Analysis') {
             steps {
-                sh 'mvn checkstyle:check'
+                bat 'mvn checkstyle:check'
             }
         }*/
 
