@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        NodeJS 'node18'
+        nodejs 'node18'
   }
     environment {
         GIT_CREDENTIALS_ID = "d24121e7-c5e6-413f-a8c4-890f7eeee1fc"
